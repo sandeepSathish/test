@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh """
-                    dir=\$(date | awk -F ' ' '{print $(NF-2)}')
+                    
+                   sh 'dir=\$(date | awk -F ' ' '{print $(NF-2)}')'
                     
                   
-                   'mkdir /home/ec2-user/build/\$dir'
-                  'cd /home/ec2-user/build/\$dir'
-                   'pwd'
-                   """
+                   sh 'mkdir /home/ec2-user/build/\$dir'
+                  sh 'cd /home/ec2-user/build/\$dir'
+                   sh 'pwd'
+                  
                    
                 }
                 echo 'Building..'
