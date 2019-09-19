@@ -7,10 +7,10 @@ pipeline {
                 script {
                     
                    sh 'dir=\$(cat /root/file1)'
-                    
+                    sh echo "${dir}"
                   
-                    sh 'mkdir /home/ec2-user/build/${dir}'
-                    sh 'cd /home/ec2-user/build/${dir}'
+                    sh 'mkdir /home/ec2-user/build/"${dir}"'
+                    sh 'cd /home/ec2-user/build/"${dir}"'
                    sh 'pwd'
                   
                    
