@@ -7,6 +7,7 @@ pipeline {
                 script {
                     
                    sh 'dir=\$(cat /root/file1)'
+                    sh 'echo "Service user is $dir"'
                 
                   
                    
