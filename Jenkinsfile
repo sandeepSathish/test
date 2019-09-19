@@ -6,10 +6,10 @@ pipeline {
             steps {
                 script {
                     
-                   dir=`date | awk -F ' ' '{print $(NF-2)}'`
-                   mkdir /home/ec2-user/build/$dir
-                   cd /home/ec2-user/build/$dir
-                   pwd
+                   sh 'dir=`date | awk -F ' ' '{print $(NF-2)}'`'
+                   sh 'mkdir /home/ec2-user/build/$dir'
+                  sh 'cd /home/ec2-user/build/$dir'
+                   sh 'pwd'
                    
                 }
                 echo 'Building..'
