@@ -7,7 +7,6 @@ pipeline {
                 script {
                     
                    sh 'dir=\$(cat /root/file1)'
-                    sh echo "${dir}"
                 
                   
                    
