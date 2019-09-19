@@ -4,6 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                script {
+                   dir=`date | awk -F ' ' '{print $(NF-2)}'`
+                   mkdir /home/ec2-user/build/$dir
+                   cd /home/ec2-user/build/$dir
+                   pwd
+                }
                 echo 'Building..'
             }
         }
